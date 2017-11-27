@@ -1,0 +1,16 @@
+{
+	"records" : [
+		{
+			"name" : "Venky",
+			"age" : "20"
+		},
+		{
+			"name" : "Naga",
+			"age" : "21"
+		},
+		{
+			"name" : "Raja",
+			"age" : "21"
+		}
+	]
+}

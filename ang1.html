@@ -1,0 +1,29 @@
+<div ng-init="partyName='venky'"> <!-- ng-init - used for initializing the values.. inside use single quotes -->
+		<input type ="text" ng-model="partyName"> <!-- ng-model - used to denote the name of the field... unique -->
+	</div>
+	<div> <br>
+		Flower brackets usage : <br>{{ partyName }} <!-- {{ }} - to print the value of the field to the screen -->
+	</div>
+	ng-bind usage : <div ng-bind="partyName">
+	</div>
+	<br><br>
+	ng-repeat usage : <br>
+	<div ng-init="parties=[	{name:'venky',symbol:'lion',price:'25000'},
+							{name:'nagarjun',symbol:'giraffe',price:'28000'},
+							{name:'raja',symbol:'bull',price:'25000.3456'},
+							{name:'dheepak',symbol:'horse',price:'2556.452'}
+						  ]">
+		<p ng-repeat="party in parties">
+			Party Name: {{ party.name }} <br>
+			Party symbol: {{ party.symbol }}<br>
+			Party price: {{ party.price | currency:"Rs.":2 }} <!-- Filters in Angularjs - use pipe operator ( | ) [ egs : uppercase , lowercase, currency and denote the number of decimal points :2 or 3 or anything] -->
+		</p>
+	</div>	
+	ng-controller usage : <br>
+	<div ng-controller = "castControl">
+		Your Party Choice : {{ partyChoice | uppercase }}<br>
+		<button ng-click="venky()">Vote for Venky</button>
+		<button ng-click="nagarjun()">Vote for Nagarjun</button>
+		<button ng-click="raja()">Vote for Raja</button>
+		<button ng-click="dheepak()">Vote for Dheepak</button>
+	</div>

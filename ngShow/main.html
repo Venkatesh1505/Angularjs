@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+	</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js">
+	</script>
+	<script src="controller.js">
+	</script>
+	<title> ngShow Directive </title>
+</head>
+<body ng-app="ngShowApp" ng-controller="ngShowCtrl">
+	<div class="message" ng-show="show=='msg1'">
+		This is message 1
+	</div>
+	<div class="message" ng-show="show=='msg2'">
+		This is message 2
+	</div>
+	<button ng-click="toggle()">Click me! </button>
+</body>
+</html>

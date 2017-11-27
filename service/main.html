@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+	</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js">
+	</script>
+	<script src="controller.js">
+	</script>
+	<title> Service usage </title>
+</head>
+<body ng-app="serviceApp" ng-controller="serviceCtrl">
+	<button ng-model="randomBtn" ng-click="generateRandom()">
+		Generate Random Number
+	</button>
+	<br>{{ randomNo }}
+</body>
+</html>

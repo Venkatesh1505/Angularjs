@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Main page </title>
+	<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+	</script>
+	<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js">
+	</script>
+	<script src = "httpControl.js">
+	</script>
+</head>
+<body ng-app="httpApp">
+	<div ng-controller="httpCtrl">
+		<ul>
+			<li ng-repeat="person in persons | filter: searchText">
+				{{ person.name + ' : ' +person.age }}<br>
+			</li>
+		</ul>
+	</div>
+	<div ng-model = "searchTerms">
+		Global Search Term : <input type = "text" ng-model="searchText.$"><br>
+		Name Search : <input type = "text" ng-model="searchText.name"><br>
+		Age search : <input type = "text" ng-model="searchText.age"><br>
+	</div>
+</body>
+</html>
